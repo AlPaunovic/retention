@@ -22,6 +22,11 @@ mixins
     flex-wrap: wrap;
     justify-content: $center;
 }
+@mixin bgImg($height) {
+    height: $height;
+    background-position: center;
+    background-size: cover;
+}
 
 
 
@@ -43,7 +48,6 @@ ul {
 }
 a {
     text-decoration: none;
-    text-transform: uppercase;
     transition: $transition;
 }
 .container {
@@ -52,6 +56,14 @@ a {
 }
 h1, h2, h3, h4 {
     text-transform: uppercase;
+}
+hr {
+    background: $colorText;
+    width: 100%;
+    display: block;
+    height: 1px;
+    content: "";
+    margin: 3px auto;
 }
 
 /**************
@@ -89,6 +101,7 @@ nav {
     }
     a {
         color: $colorWhite;
+        text-transform: uppercase;
         font-size: 1.1rem;
         font-weight: 300;
         &:hover {
@@ -97,3 +110,55 @@ nav {
         }
     }
 }
+
+/**************
+about
+**************/
+
+.about {
+    padding: $padding;
+    color: $colorText;
+    background-image: url(../img/bg01.png);
+    @include bgImg(90vh);
+    .container {
+        @include flex(space-between);
+        article {
+            padding: 15px;
+        }
+        article:first-child {
+            flex: 0 0 30%;
+            h3 {
+                color: $colorBlue;
+                font-size: 1.7rem;
+                font-weight: 800;
+            }
+            p {
+                line-height: 3;
+            }
+            a {
+                font-size: .9rem;
+                &:hover {
+                    color: $colorSection;
+                    text-decoration: underline;
+                }                
+            }
+        }
+        article:last-child {
+           flex: 0 0 65%;
+           h2 {
+                color: $colorBlue;
+                font-size: 2.5rem;
+                font-weight: 800;
+           }
+           h4 {
+               color: $colorText;
+               margin: 20px 0 25px 0;
+           }
+           p {
+               line-height: 1.7;
+           }
+        }
+    }    
+}
+    
+
