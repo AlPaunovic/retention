@@ -262,3 +262,15 @@ blog
         }
     }
 }
+
+/**************
+footer
+**************/
+
+footer {
+    padding: $padding;
+    background-color: $colorGray;
+    color: $colorText;
+    text-align: center;
+    font-size: .9rem;
+}

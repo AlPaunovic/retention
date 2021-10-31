@@ -318,4 +318,15 @@ blog
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
+
+/**************
+footer
+**************/
+footer {
+  padding: 100px 0;
+  background-color: #333333;
+  color: #4f4f4f;
+  text-align: center;
+  font-size: .9rem;
+}
 /*# sourceMappingURL=style.css.map */
