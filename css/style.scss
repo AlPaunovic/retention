@@ -67,6 +67,9 @@ a {
 .container {
     width: 90%;
     margin: auto;
+    @media(max-width: 767px) {
+        width: 95%;
+    }
 }
 h1, h2, h3, h4 {
     text-transform: uppercase;
@@ -91,10 +94,16 @@ header {
     h1 {
         font-size: 3rem;
         font-weight: 800;
+        @media(max-width: 767px) {
+            font-size: 2rem;
+        }
     }
     h3 {
         font-size: 1.3rem;
         font-weight: 300;
+        @media(max-width: 767px) {
+            font-size: .9rem;
+        }
     }
 }
 
@@ -108,16 +117,25 @@ nav {
     } 
     li {
         margin: 40px 30px 60px 30px;
+        @media(max-width: 767px) {
+            margin: 5px;
+        }
     }
     .active {
         padding: 15px 25px;
         background-color: rgba(255, 255, 255, .5);
+        @media(max-width: 767px) {
+            padding: 5px 10px;
+        }
     }
     a {
         color: $colorWhite;
         text-transform: uppercase;
         font-size: 1.1rem;
         font-weight: 300;
+        @media(max-width: 767px) {
+            font-size: .8rem;
+        }
         &:hover {
             color: $colorText;
             cursor: pointer;
@@ -131,9 +149,15 @@ about
 
 .about {
     padding: $padding;
+    @media(max-width: 767px) {
+        padding: 30px 0;
+    }
     color: $colorText;
     background-image: url(../img/bg01.png);
     @include bgImg(90vh);
+    @media(max-width: 767px) {
+        @include bgImg(140vh);
+    }
     .container {
         @include flex(space-between);
         article {
@@ -141,13 +165,23 @@ about
         }
         article:first-child {
             flex: 0 0 30%;
+            @media(max-width: 767px) {
+                flex: 100%;
+            }
             h3 {
                 color: $colorBlue;
                 font-size: 1.7rem;
                 font-weight: 800;
+                @media(max-width: 767px) {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
             }
             p {
-                line-height: 3;
+                line-height: 1.7;
+                @media(max-width: 767px) {
+                    line-height: .9;
+                }
             }
             a {
                 font-size: .9rem;
@@ -159,17 +193,32 @@ about
         }
         article:last-child {
            flex: 0 0 65%;
+           @media(max-width: 767px) {
+            flex: 100%;
+            order: -1;
+        }
            h2 {
                 color: $colorBlue;
                 font-size: 2.5rem;
                 font-weight: 800;
+                @media(max-width: 767px) {
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
            }
            h4 {
                color: $colorText;
                margin: 20px 0 25px 0;
+               @media(max-width: 767px) {
+                    margin: 10px 0;
+                    font-size: .8rem;
+                }
            }
            p {
                line-height: 1.7;
+               @media(max-width: 767px) {
+                   line-height: 1.5;
+               }
            }
         }
     }    
@@ -197,6 +246,9 @@ team
         }
         article {
             flex: 0 0 23%;
+            @media(max-width: 767px) {
+                flex: 100%;
+            }
             h4 {
                 color: $colorWhite;
                 font-size: 1.3rem;
@@ -229,6 +281,9 @@ blog
         article {
             flex: 0 0 29%;
             padding: 10px;
+            @media(max-width: 767px) {
+                flex: 100%;
+            }
             h4 {
                 font-size: 1.3rem;
                 letter-spacing: .9px;
