@@ -7,11 +7,23 @@ $colorGray: #333333;
 $colorWhite: #ffffff;
 $colorBlue: #00aabb;
 $colorText: #4f4f4f;
+$colorWhite: #fff;
 $colorSection: #313131;
 $fontFamily: "Mulish", sans-serif;
 $fontSize: 16px;
-$transition: 0.4 ease;
+$transition: .4s ease;
 $padding: 100px 0;
+
+/**************
+mixins
+**************/
+@mixin flex($center) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: $center;
+}
+
+
 
 /**************
 basic styles
@@ -41,6 +53,7 @@ a {
 h1, h2, h3, h4 {
     text-transform: uppercase;
 }
+
 /**************
 header
 **************/
@@ -56,5 +69,31 @@ header {
     h3 {
         font-size: 1.3rem;
         font-weight: 300;
+    }
+}
+
+/**************
+nav
+**************/
+nav {
+    background-color: $colorBlue;
+    ul {
+        @include flex(center);
+    } 
+    li {
+        margin: 40px 30px 60px 30px;
+    }
+    .active {
+        padding: 15px 25px;
+        background-color: rgba(255, 255, 255, .5);
+    }
+    a {
+        color: $colorWhite;
+        font-size: 1.1rem;
+        font-weight: 300;
+        &:hover {
+            color: $colorText;
+            cursor: pointer;
+        }
     }
 }
