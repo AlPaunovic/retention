@@ -42,11 +42,11 @@ h1, h2, h3, h4 {
 
 hr {
   background: #4f4f4f;
-  width: 100%;
+  width: 90%;
   display: block;
   height: 1px;
   content: "";
-  margin: 3px auto;
+  margin: 3px 0;
 }
 
 /**************
@@ -204,6 +204,15 @@ team
 .team .container img {
   width: 100%;
   margin: 20px 0;
+  opacity: .9;
+}
+
+.team .container img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .team .container article {
@@ -216,13 +225,14 @@ team
   color: #fff;
   font-size: 1.3rem;
   letter-spacing: .9px;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .team .container article p {
-  color: #fff;
   font-weight: 400;
   font-size: .9rem;
+  letter-spacing: .5px;
+  color: #fff;
 }
 
 .team .container article button {
@@ -241,5 +251,71 @@ team
   cursor: pointer;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+}
+
+/**************
+blog
+**************/
+.blog {
+  padding: 100px 0;
+  background-color: #4f4f4f;
+  color: #fff;
+}
+
+.blog .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog .container article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 29%;
+          flex: 0 0 29%;
+  padding: 10px;
+}
+
+.blog .container article h4 {
+  font-size: 1.3rem;
+  letter-spacing: .9px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.blog .container article p {
+  font-weight: 300;
+  font-size: .9rem;
+  letter-spacing: .4px;
+  color: #fff;
+  line-height: 1.9;
+}
+
+.blog .container article hr {
+  margin: 8px 0;
+}
+
+.blog .container article a {
+  color: #fff;
+}
+
+.blog .container article a:hover {
+  text-decoration: underline;
+}
+
+.blog .container article i {
+  font-size: 2rem;
+  margin: 10px 10px 20px 10px;
+}
+
+.blog .container article i:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

@@ -41,9 +41,7 @@ mixins
         cursor: pointer;
         transition: $transition;
     }
-
 }
-
 
 
 /**************
@@ -75,11 +73,11 @@ h1, h2, h3, h4 {
 }
 hr {
     background: $colorText;
-    width: 100%;
+    width: 90%;
     display: block;
     height: 1px;
     content: "";
-    margin: 3px auto;
+    margin: 3px 0;
 }
 
 /**************
@@ -190,6 +188,12 @@ team
         img {
             width: 100%;
             margin: 20px 0;
+            opacity: .9;
+            &:hover {
+                opacity: 1;
+                transform: scale(1.1);
+                transition: 1s ease;
+            }
         }
         article {
             flex: 0 0 23%;
@@ -197,12 +201,13 @@ team
                 color: $colorWhite;
                 font-size: 1.3rem;
                 letter-spacing: .9px;
-                font-weight: 400;
+                font-weight: 600;
             }
             p {
-                color: $colorWhite;
                 font-weight: 400;
                 font-size: .9rem;
+                letter-spacing: .5px;
+                color: $colorWhite;
             }
             button {
                 @include btn;
@@ -211,3 +216,49 @@ team
     }
 }
 
+/**************
+blog
+**************/
+
+.blog {
+    padding: $padding;
+    background-color: $colorText;
+    color: $colorWhite;
+    .container {
+        @include flex(space-between);
+        article {
+            flex: 0 0 29%;
+            padding: 10px;
+            h4 {
+                font-size: 1.3rem;
+                letter-spacing: .9px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            p {
+                font-weight: 300;
+                font-size: .9rem;
+                letter-spacing: .4px;
+                color: $colorWhite;
+                line-height: 1.9;
+            }
+            hr {
+                margin: 8px 0;
+            }
+            a {
+                color: $colorWhite;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            i {
+                font-size: 2rem;
+                margin: 10px 10px 20px 10px;
+                &:hover {
+                    transform: rotate(360deg);
+                    transition: 1s ease-in-out;
+                }
+            }
+        }
+    }
+}
