@@ -180,4 +180,66 @@ about
 .about .container article:last-child p {
   line-height: 1.7;
 }
+
+/**************
+team
+**************/
+.team {
+  background-color: #313131;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.team .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team .container img {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.team .container article {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 23%;
+          flex: 0 0 23%;
+}
+
+.team .container article h4 {
+  color: #fff;
+  font-size: 1.3rem;
+  letter-spacing: .9px;
+  font-weight: 400;
+}
+
+.team .container article p {
+  color: #fff;
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.team .container article button {
+  background-color: #00aabb;
+  color: #fff;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border: none;
+  margin: 20px 0;
+}
+
+.team .container article button:hover {
+  color: #00aabb;
+  background-color: #4f4f4f;
+  cursor: pointer;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
 /*# sourceMappingURL=style.css.map */
